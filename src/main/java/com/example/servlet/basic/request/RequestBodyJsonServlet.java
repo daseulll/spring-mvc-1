@@ -1,6 +1,6 @@
 package com.example.servlet.basic.request;
 
-import com.example.servlet.basic.HelloJsonData;
+import com.example.servlet.basic.HelloData;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.util.StreamUtils;
 
@@ -29,7 +29,7 @@ public class RequestBodyJsonServlet extends HttpServlet {
         String messageBody = StreamUtils.copyToString(inputStream, StandardCharsets.UTF_8);
         System.out.println("messageBody = " + messageBody);
 
-        HelloJsonData helloJsonData = objectMapper.readValue(messageBody, HelloJsonData.class);
+        HelloData helloJsonData = objectMapper.readValue(messageBody, HelloData.class);
 
         System.out.println("helloJsonData = " + helloJsonData.getUsername());
         System.out.println("helloJsonData = " + helloJsonData.getAge());

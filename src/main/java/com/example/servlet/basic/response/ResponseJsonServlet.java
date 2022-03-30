@@ -1,6 +1,6 @@
 package com.example.servlet.basic.response;
 
-import com.example.servlet.basic.HelloJsonData;
+import com.example.servlet.basic.HelloData;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.servlet.ServletException;
@@ -21,7 +21,7 @@ public class ResponseJsonServlet extends HttpServlet {
         response.setContentType("application/json");
         response.setCharacterEncoding("utf-8");
 
-        HelloJsonData helloJsonData = new HelloJsonData();
+        HelloData helloJsonData = new HelloData();
         helloJsonData.setUsername("daseul");
         helloJsonData.setAge(22);
 
